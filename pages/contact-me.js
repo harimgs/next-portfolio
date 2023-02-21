@@ -1,4 +1,53 @@
+import { useState } from "react";
+import { sendContactForm } from "../lib/api";
+
+const initValues = { name: "", email: "", subject: "", message: "" };
+
+const initState = { isLoading: false, error: "", values: initValues };
+
 export default function AboutMe() {
+  const toast = useToast();
+  const [state, setState] = useState(initState);
+  const [touched, setTouched] = useState({});
+
+  const { values, isLoading, error } = state;
+
+  const onBlur = ({ target }) =>
+    setTouched((prev) => ({ ...prev, [target.name]: true }));
+
+  const handleChange = ({ target }) =>
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value,
+      },
+    }));
+
+  const onSubmit = async () => {
+    setState((prev) => ({
+      ...prev,
+      isLoading: true,
+    }));
+    try {
+      await sendContactForm(values);
+      setTouched({});
+      setState(initState);
+      toast({
+        title: "Message sent.",
+        status: "success",
+        duration: 2000,
+        position: "top",
+      });
+    } catch (error) {
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+        error: error.message,
+      }));
+    }
+  };
+
   return (
     <>
       <section className="text-gray-600 body-font relative">
@@ -19,7 +68,12 @@ export default function AboutMe() {
                   <label for="name" className="leading-7 text-sm text-gray-600">
                     Name
                   </label>
-                  <input type="text" id="name" name="name" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  />
                 </div>
               </div>
               <div className="p-2 w-1/2">
@@ -30,7 +84,12 @@ export default function AboutMe() {
                   >
                     Email
                   </label>
-                  <input type="email" id="email" name="email" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  />
                 </div>
               </div>
               <div className="p-2 w-full">

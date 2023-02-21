@@ -45,11 +45,21 @@ export default function ProjectItem({ data }) {
       />
 
       <div className="flex flex-col p-4">
+        
         <h1 className="text-2xl font-bold">{title}</h1>
-        <h3 className="mt-4 text-xl">{description}</h3>
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          Link
-        </a>
+        <h3 className="mt-4 text-xl mb-2">{description}</h3>
+        {link ? (
+          <a
+            className="text-xl font-semibold"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Website Link
+          </a>
+        ) : (
+          ""
+        )}
         <p className="my-1 ">
           Duration : {startDate} ~ {endDate} (
           {calculateDate(startDate, endDate)} days)
