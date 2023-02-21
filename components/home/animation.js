@@ -9,7 +9,7 @@ import lottieJson from "/public/animation.json";
 export default function Animation() {
   return (
     <Lottie
-      loop={false}
+      loop={true}
       animationData={lottieJson}
       play
       speed={0.7}

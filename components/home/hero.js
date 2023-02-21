@@ -10,17 +10,15 @@ export default function Hero() {
           <br className="lg:inline-block" />
           {"HaRim's Portfolio!"}
         </h1>
-        <p className="mb-8 leading-relaxed">
-          Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
-          plant cold-pressed tacos poke beard tote bag. Heirloom echo park
-          mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon
-          try-hard chambray.
+        <p className="mb-8 leading-relaxed text-2xl">
+          My name is HaRim Choi, and I am a first-year CS Technician student at
+          Mohawk College. I have a passion for building web and mobile
+          applications, and I am always eager to learn new technologies and
+          adapt to different tools as required. I enjoy expanding my knowledge
+          and meeting new people along the way.
         </p>
         <div className="flex justify-center">
-          <Link
-            href="/projects"
-            className="btn-project"
-          >
+          <Link href="/projects" className="btn-project">
             View Projects
           </Link>
         </div>
