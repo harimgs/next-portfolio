@@ -1,52 +1,52 @@
-import { useState } from "react";
-import { sendContactForm } from "../lib/api";
+// import { useState } from "react";
+// import { sendContactForm } from "../lib/api";
 
-const initValues = { name: "", email: "", subject: "", message: "" };
+// const initValues = { name: "", email: "", subject: "", message: "" };
 
-const initState = { isLoading: false, error: "", values: initValues };
+// const initState = { isLoading: false, error: "", values: initValues };
 
-export default function AboutMe() {
-  const toast = useToast();
-  const [state, setState] = useState(initState);
-  const [touched, setTouched] = useState({});
+export default function ContactMe() {
+  // const toast = useToast();
+  // const [state, setState] = useState(initState);
+  // const [touched, setTouched] = useState({});
 
-  const { values, isLoading, error } = state;
+  // const { values, isLoading, error } = state;
 
-  const onBlur = ({ target }) =>
-    setTouched((prev) => ({ ...prev, [target.name]: true }));
+  // const onBlur = ({ target }) =>
+  //   setTouched((prev) => ({ ...prev, [target.name]: true }));
 
-  const handleChange = ({ target }) =>
-    setState((prev) => ({
-      ...prev,
-      values: {
-        ...prev.values,
-        [target.name]: target.value,
-      },
-    }));
+  // const handleChange = ({ target }) =>
+  //   setState((prev) => ({
+  //     ...prev,
+  //     values: {
+  //       ...prev.values,
+  //       [target.name]: target.value,
+  //     },
+  //   }));
 
-  const onSubmit = async () => {
-    setState((prev) => ({
-      ...prev,
-      isLoading: true,
-    }));
-    try {
-      await sendContactForm(values);
-      setTouched({});
-      setState(initState);
-      toast({
-        title: "Message sent.",
-        status: "success",
-        duration: 2000,
-        position: "top",
-      });
-    } catch (error) {
-      setState((prev) => ({
-        ...prev,
-        isLoading: false,
-        error: error.message,
-      }));
-    }
-  };
+  // const onSubmit = async () => {
+  //   setState((prev) => ({
+  //     ...prev,
+  //     isLoading: true,
+  //   }));
+  //   try {
+  //     await sendContactForm(values);
+  //     setTouched({});
+  //     setState(initState);
+  //     toast({
+  //       title: "Message sent.",
+  //       status: "success",
+  //       duration: 2000,
+  //       position: "top",
+  //     });
+  //   } catch (error) {
+  //     setState((prev) => ({
+  //       ...prev,
+  //       isLoading: false,
+  //       error: error.message,
+  //     }));
+  //   }
+  // };
 
   return (
     <>
