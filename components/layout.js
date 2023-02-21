@@ -12,7 +12,7 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Header />
-      <div className="mt-5">{children}</div>
+      <div className="mt-">{children}</div>
       <Footer />
     </div>
   );
