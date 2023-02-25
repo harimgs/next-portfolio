@@ -79,7 +79,7 @@ export default function Contact() {
         )}
       </div>
 
-      <div className="lg:w-1/2 md:w-2/3 mx-auto">
+      <div className="contact-form lg:w-1/2 md:w-2/3 mx-auto">
         <div className="flex flex-wrap -m-2">
           <FormControl
             isRequired
@@ -146,6 +146,7 @@ export default function Contact() {
               value={values.message}
               onChange={handleChange}
               onBlur={onBlur}
+              className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             />
             <FormErrorMessage>Required</FormErrorMessage>
           </FormControl>
