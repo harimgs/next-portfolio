@@ -29,7 +29,7 @@ export async function getStaticProps() {
     body: JSON.stringify({
       sorts: [
         {
-          property: "Name",
+          property: "WorkPeriod",
           direction: "ascending",
         },
       ],
