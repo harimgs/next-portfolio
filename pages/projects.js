@@ -3,7 +3,7 @@ import ProjectItem from "@/components/projects/project-item";
 
 export default function Projects({ projects }) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 mb-10 .fade-in">
+    <div className="flex flex-col items-center justify-center min-h-screen px-6 mb-10 mt-5 .fade-in">
       <h1 className="text-4xl font-bold sm:text-6xl">
         Projects Total :
         <span className="pl-4 text-blue-500">{projects.results.length}</span>
