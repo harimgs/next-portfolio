@@ -8,7 +8,7 @@ export default function Projects({ projects }) {
         Projects Total :
         <span className="pl-4 text-blue-500">{projects.results.length}</span>
       </h1>
-      <div className="grid grid-cols-1 gap-8 p-4 m-4 xl:w-7/12 lg:w-8/12 md:w-10/12 md:grid-cols-2 md:gap-14 md:p-12 w-full">
+      <div className="grid grid-cols-1 gap-8 p-4 m-4 xl:w-8/12 lg:w-11/12 lg:grid-cols-2 md:gap-14 md:p-12 w-full">
         {projects.results.map((project, i) => (
           <ProjectItem key={i} data={project} />
         ))}

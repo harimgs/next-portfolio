@@ -13,6 +13,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@next/font": "13.1.6",
+    "@vercel/analytics": "^0.1.11",
     "@videsk/tailwind-random-color": "^0.2.0-beta",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
