@@ -33,11 +33,11 @@ export default function Hero() {
               <div className="h-full w-1  bg-gray-700 dark:bg-gray-200 pointer-events-none"></div>
             </div>
             <div className="flex-shrink-0 w-14 h-14 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-              <div class="w-14 flex-shrink-0 flex flex-col text-center leading-none">
-                <span class="text-white mb-0.5 border-b-2 border-gray-200 text-sm font-medium">
+              <div className="w-14 flex-shrink-0 flex flex-col text-center leading-none">
+                <span className="text-white mb-1 border-b-2 border-gray-200 text-sm font-medium">
                   Feb
                 </span>
-                <span class="font-medium text-sm text-slate-800 title-font leading-none">
+                <span className="font-medium text-xs text-slate-300 title-font leading-none">
                   2023
                 </span>
               </div>
@@ -58,11 +58,11 @@ export default function Hero() {
 
           <div className="flex relative">
             <div className="flex-shrink-0 w-14 h-14 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-              <div class="w-14 flex-shrink-0 flex flex-col text-center leading-none">
-                <span class="text-white mb-0.5 border-b-2 border-gray-200 text-sm font-medium">
+              <div className="w-14 flex-shrink-0 flex flex-col text-center leading-none">
+              <span className="text-white mb-1 border-b-2 border-gray-200 text-sm font-medium">
                   Mar
                 </span>
-                <span class="font-medium text-sm text-slate-800 title-font leading-none">
+                <span className="font-medium text-xs text-slate-300 title-font leading-none">
                   2023
                 </span>
               </div>

@@ -76,8 +76,13 @@ export default function Footer() {
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                   <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
                 </svg>
-              </a>
-              <a className="ml-3 text-gray-500">
+              </a> */}
+              <a
+                className="ml-3 text-gray-500"
+                href="https://www.linkedin.com/in/harim-c-b342b7161"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   fill="currentColor"
                   stroke="currentColor"
@@ -93,7 +98,7 @@ export default function Footer() {
                   ></path>
                   <circle cx="4" cy="4" r="2" stroke="none"></circle>
                 </svg>
-              </a> */}
+              </a>
             </span>
           </div>
         </div>
